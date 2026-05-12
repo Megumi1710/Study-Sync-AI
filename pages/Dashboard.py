@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 
 def show_dashboard():
 
@@ -30,3 +30,20 @@ def show_dashboard():
     st.write("✅ Studied Physics for 2 hours")
     st.write("✅ Completed Math assignment")
     st.write("✅ Revised Chemistry notes")
+# Chart Section
+st.subheader("📈 Study Analytics")
+
+# Sample Data
+data = {
+    "Subject": ["Math", "Physics", "Chemistry", "English"],
+    "Hours": [2, 3, 1, 2]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Set Subject as index
+df = df.set_index("Subject")
+
+# Display Bar Chart
+st.bar_chart(df)
