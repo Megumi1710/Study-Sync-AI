@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-def show_dashboard():
+def show_Dashboard():
 
     # Page Title
     st.title("📊 Dashboard")
